@@ -1,7 +1,10 @@
 from pymongo import MongoClient
 from database import insertLink
+from dotenv import load_dotenv
+import os
+load_dotenv()
 # Connection string
-uri = "mongodb+srv://sweash:bot@cluster0.efjiw3q.mongodb.net/?retryWrites=true&w=majority"
+uri = os.environ['MONGO_URL']
 
 # Connect to MongoDB
 client = MongoClient(uri)

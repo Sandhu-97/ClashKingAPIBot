@@ -1,7 +1,10 @@
 import disnake
 from disnake.ext import commands
-import os
 
+import os
+from dotenv import load_dotenv
+
+BOT_TOKEN = os.environ['BOT_TOKEN']
 bot = commands.InteractionBot(test_guilds=[556053478812942366], owner_id=511918143791169536)
 
 @bot.event
@@ -45,4 +48,4 @@ async def unload(inter:disnake.ApplicationCommandInteraction, name:str):
     await inter.response.send_message("Cog Unloaded", ephemeral=True)
 
 load_cogs()
-bot.run("NzY4NTAxMDY0NjM4MDA1MzAw.GUusES.UP4D3F9n7jZTT72QH0ES2emmkMKdlQ6hyoIeDM")
+bot.run(BOT_TOKEN)
