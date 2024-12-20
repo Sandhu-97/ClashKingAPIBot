@@ -59,3 +59,13 @@ CLAN_REQUIREMENTS = {
     SG_TAG:[SG_ATTACK_WINS, SG_DONATIONS, SG_CLAN_GAME_POINTS],
 
 }
+
+CLAN_NAMES = {
+    CLAN_TAGS[0] : "JOHN CENA",
+    CLAN_TAGS[1] : "#1 ELITE",
+    CLAN_TAGS[2] : "playyboys♥",
+    CLAN_TAGS[3] : "HELL BOYS",
+    CLAN_TAGS[4] : "AvengerS.",
+    CLAN_TAGS[5] : "ELITE GAMERZ",
+    CLAN_TAGS[6] : "sports game",
+}

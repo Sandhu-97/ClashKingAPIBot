@@ -1,8 +1,7 @@
 import disnake
 from disnake.ext import commands
 from database import getMinAttacksData, getMinDonationsData, getLink
-from ClashKingAPI import get_clan, get_player
-from requirements import DATE, CLAN_SHORTS, CLAN_TAGS, CLAN_REQUIREMENTS
+from requirements import CLAN_SHORTS, CLAN_TAGS, CLAN_REQUIREMENTS, CLAN_NAMES
 
 class Reqr(commands.Cog):
     def __init__(self, bot):
@@ -23,7 +22,7 @@ class Reqr(commands.Cog):
         attacks_data = getMinAttacksData(CLAN_SHORTS[clan], CLAN_REQUIREMENTS[clan][0])
         donations_data = getMinDonationsData(CLAN_SHORTS[clan], CLAN_REQUIREMENTS[clan][1])
 
-        embed = disnake.Embed(title="**Members Below Season Requirements**", color=disnake.Color.red())
+        embed = disnake.Embed(title=f"**{CLAN_NAMES[clan]} Members Below Season Requirements**", color=disnake.Color.red())
         attacks="__**Attacks**__"
         for row in attacks_data:
             userid = getLink(row[1])

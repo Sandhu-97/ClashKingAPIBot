@@ -57,5 +57,3 @@ def getLink(tag):
     data = cursor.fetchone()
     cursor.close()
     return data
-
-# print(getLink("#GQ09RUQC")[0])
