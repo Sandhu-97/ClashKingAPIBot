@@ -18,12 +18,12 @@ class LoadData(commands.Cog):
             await inter.followup.send('❌ Command is only available for bot owner', ephemeral=True)
             return;
 
-        await inter.followup.send('Fetching data for all clans... _may take some time_')
         for tag in CLAN_TAGS:
             clan_json = get_clan(tag)
             clan_name = clan_json['name']
             clan_tag = clan_json['tag']
             clearTable(CLAN_SHORTS[tag])
+            await inter.followup.send(f'Fetching data for {clan_name}...', ephemeral=True)
             for member in clan_json['memberList']:
                 try:
                     player_json = get_player(member['tag'])
