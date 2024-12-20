@@ -2,9 +2,8 @@ import disnake
 from disnake.ext import commands
 
 import os
-from dotenv import load_dotenv
-
 BOT_TOKEN = os.environ['BOT_TOKEN']
+
 bot = commands.InteractionBot(test_guilds=[556053478812942366], owner_id=511918143791169536)
 
 @bot.event
