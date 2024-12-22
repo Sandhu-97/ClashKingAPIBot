@@ -18,9 +18,9 @@ def insertIntoTable(clan, name, tag, attack_wins, donations):
     cursor.close()
 
 
-def clearTable(clan):
+def clearTable(table_name):
     cursor = conn.cursor()
-    query = f"DELETE FROM {clan}"
+    query = f"DELETE FROM {table_name}"
     cursor.execute(query)
     conn.commit()
     cursor.close()
