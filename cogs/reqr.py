@@ -30,7 +30,7 @@ class Reqr(commands.Cog):
                 userid=0
             else:
                 userid=userid[0]
-            attacks = f"{attacks}\n {row[0]} {row[1]} - {str(row[2])} attacks - <@{userid}>"
+            attacks = f"{attacks}\n {row[0]} *{row[1]}* - **{str(row[2])}** attacks - <@{userid}>"
         donations = "__**Donations**__"
         for row in donations_data:
             userid = getLink(row[1])
@@ -38,7 +38,7 @@ class Reqr(commands.Cog):
                 userid=0
             else:
                 userid=userid[0]
-            donations = f"{donations}\n {row[0]} {row[1]} - {str(row[2])} donations - <@{userid}>"
+            donations = f"{donations}\n {row[0]} *{row[1]}* - **{str(row[2])}** donations - <@{userid}>"
 
         embed.description=attacks+"\n\n"+donations
         await inter.followup.send(embed=embed)

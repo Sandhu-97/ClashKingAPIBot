@@ -10,7 +10,7 @@ bot = commands.InteractionBot(test_guilds=[556053478812942366], owner_id=5119181
 async def on_ready():
     print(f"{bot.user} is ready")
 
-cogs = ['ping', 'reqr', 'loaddata']
+cogs = ['ping', 'reqr', 'loaddata', 'loadclan']
 
 def load_cogs():
     for cog in cogs:
