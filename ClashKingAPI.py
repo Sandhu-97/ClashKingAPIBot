@@ -1,6 +1,4 @@
 import requests
-from datetime import datetime
-from requirements import JC_ATTACK_WINS, JC_DONATIONS
 
 def get_player(tag:str):
     tag=tag.upper()
@@ -17,9 +15,3 @@ def get_clan(tag:str):
     req = requests.get(url=url)
     data = req.json()
     return data
-
-
-month = datetime.now().month
-year = datetime.now().year
-year_month_string = f"{year}-{month}"
-
