@@ -28,7 +28,7 @@ def clearTable(table_name):
 
 def getMinAttacksData(clan, min_attacks):
     cursor = conn.cursor()
-    query = f"SELECT NAME, TAG, ATTACK_WINS FROM {clan} WHERE attack_wins<={min_attacks}"
+    query = f"SELECT NAME, TAG, ATTACK_WINS FROM {clan} WHERE attack_wins<{min_attacks}"
     cursor.execute(query)
     data = cursor.fetchall()
     cursor.close()
@@ -37,7 +37,7 @@ def getMinAttacksData(clan, min_attacks):
 
 def getMinDonationsData(clan, min_donation):
     cursor = conn.cursor()
-    query = f"SELECT NAME, TAG, DONATIONS FROM {clan} WHERE donations<={min_donation}"
+    query = f"SELECT NAME, TAG, DONATIONS FROM {clan} WHERE donations<{min_donation}"
     cursor.execute(query)
     data = cursor.fetchall()
     cursor.close()

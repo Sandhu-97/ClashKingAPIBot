@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from database import insertLink
+from database import insertLink, clearTable
 from dotenv import load_dotenv
 import os
 load_dotenv()
@@ -19,3 +19,11 @@ collection = db['cocs']
 
 document = collection.find()
 
+
+def load_new_player_links():
+    clearTable('LINKS')
+    for doc in document:
+        insertLink(doc['cocTag'], doc['discordId'])
+        print(doc['cocTag'], doc['discordId'], 'inserted')
+
+    print('all inserted')
