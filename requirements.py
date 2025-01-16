@@ -1,6 +1,6 @@
 from datetime import datetime
 
-DATE = f"{datetime.now().year}-{datetime.now().month}"
+DATE = f"{datetime.now().year}-0{datetime.now().month}"
 
 JC_TAG = '#9JUVCV0L'
 JC_ATTACK_WINS = 70
